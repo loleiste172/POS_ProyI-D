@@ -1,0 +1,14 @@
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\punto_venta.exe.config
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\punto_venta.exe
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\punto_venta.pdb
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.Form1.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.Form2.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.Form3.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.Form4.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.Properties.Resources.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.exe
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.pdb
