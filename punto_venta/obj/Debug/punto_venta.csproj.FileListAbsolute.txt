@@ -12,3 +12,4 @@ C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.GenerateRe
 C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.exe
 C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.pdb
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.Form5.resources
