@@ -38,3 +38,13 @@ C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto
 C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.exe
 C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pdb
 C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\bin\Debug\MD5.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\MD5.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\System.Data.SQLite.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\System.Data.SQLite.xml
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.CopyComplete

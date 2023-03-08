@@ -34,6 +34,7 @@ namespace punto_venta
             //Form1 form2 = new Form1();
             //form2.Show();
             //Hide();
+            //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             if (textBox1.Text.Length == 0 && textBox2.Text.Length == 0)
             {
                 MessageBox.Show("Llena los campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
