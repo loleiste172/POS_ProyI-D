@@ -131,6 +131,7 @@
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Inicio de sesión";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
