@@ -38,6 +38,7 @@ namespace punto_venta
             if (textBox1.Text.Length == 0 && textBox2.Text.Length == 0)
             {
                 MessageBox.Show("Llena los campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Application.Exit();
             }
             else
             {
@@ -50,14 +51,19 @@ namespace punto_venta
                 //MessageBox.Show("Success");
 
                 int count = 0;
+                int usrid = 0;
+                
                 while (dr.Read())
                 {
+                    //usrid = (int)dr["id"];
+                    var iid= dr["id"];
+                    usrid = Convert.ToInt32(iid);
                     count++;
                 }
                 if (count == 1){
-                    MessageBox.Show("Success", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Form1 frm = new Form1();
+                    //MessageBox.Show("Success", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Hide();
+                    Form1 frm = new Form1(usrid);
                     frm.Show();
                 }
                 else
