@@ -16,5 +16,15 @@ namespace punto_venta
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = @"INSERT INTO usuarios(usuario, contrasena, nivel, atencion) VALUES";
+        }
     }
 }
