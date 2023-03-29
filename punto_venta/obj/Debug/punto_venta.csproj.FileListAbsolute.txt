@@ -48,3 +48,4 @@ C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\EntityFramework.xml
 C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\USER\Desktop\proyid\punto_venta\bin\Debug\System.Data.SQLite.xml
 C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.csproj.CopyComplete
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.pag_empleados.resources
