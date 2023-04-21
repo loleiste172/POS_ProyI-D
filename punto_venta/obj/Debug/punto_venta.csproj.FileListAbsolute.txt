@@ -76,3 +76,5 @@ C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\ob
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.exe
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pdb
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.inventarioAdmin.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.inventarioAdmin.resources
+C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.add_prod.resources

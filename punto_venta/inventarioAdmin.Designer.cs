@@ -36,11 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.msjBienvenida = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.rbttProductAgotados = new System.Windows.Forms.RadioButton();
@@ -58,6 +53,8 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agotado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbViewProduct = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbDescripcion = new System.Windows.Forms.Label();
             this.bttEliminarProducto = new System.Windows.Forms.Button();
             this.bttGuardarCambios = new System.Windows.Forms.Button();
             this.txtAgotado = new System.Windows.Forms.Label();
@@ -72,10 +69,13 @@
             this.lbPrecio = new System.Windows.Forms.Label();
             this.lbCategoria = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
-            this.imgProduct = new System.Windows.Forms.PictureBox();
-            this.lbDescripcion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.imgProduct = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -101,6 +101,7 @@
             this.groupBox1.Size = new System.Drawing.Size(981, 65);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label5
             // 
@@ -151,62 +152,6 @@
             this.msjBienvenida.Size = new System.Drawing.Size(66, 13);
             this.msjBienvenida.TabIndex = 4;
             this.msjBienvenida.Text = "¡Bienvenido!";
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::punto_venta.Properties.Resources.icon_ventas;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(200, 9);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 34);
-            this.button5.TabIndex = 3;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::punto_venta.Properties.Resources.icon_datos2;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(138, 10);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(46, 34);
-            this.button4.TabIndex = 2;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::punto_venta.Properties.Resources.icon_empleados;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(76, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 33);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(6, 10);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(52, 33);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::punto_venta.Properties.Resources.icon_add;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(12, 86);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(62, 54);
-            this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -307,6 +252,7 @@
             this.agotado});
             this.dataGridView1.Location = new System.Drawing.Point(88, 175);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(640, 361);
             this.dataGridView1.TabIndex = 8;
             // 
@@ -375,6 +321,22 @@
             this.gbViewProduct.TabIndex = 10;
             this.gbViewProduct.TabStop = false;
             this.gbViewProduct.Text = "Vizualizar Producto";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 321);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 20);
+            this.textBox1.TabIndex = 16;
+            // 
+            // lbDescripcion
+            // 
+            this.lbDescripcion.AutoSize = true;
+            this.lbDescripcion.Location = new System.Drawing.Point(7, 324);
+            this.lbDescripcion.Name = "lbDescripcion";
+            this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
+            this.lbDescripcion.TabIndex = 15;
+            this.lbDescripcion.Text = "Descripción:";
             // 
             // bttEliminarProducto
             // 
@@ -496,6 +458,11 @@
             this.lbNombre.TabIndex = 1;
             this.lbNombre.Text = "Nombre:";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // imgProduct
             // 
             this.imgProduct.Location = new System.Drawing.Point(6, 19);
@@ -504,26 +471,62 @@
             this.imgProduct.TabIndex = 0;
             this.imgProduct.TabStop = false;
             // 
-            // lbDescripcion
+            // button6
             // 
-            this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(7, 324);
-            this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.lbDescripcion.TabIndex = 15;
-            this.lbDescripcion.Text = "Descripción:";
+            this.button6.BackgroundImage = global::punto_venta.Properties.Resources.icon_add;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(12, 86);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(62, 54);
+            this.button6.TabIndex = 5;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox1
+            // button5
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 321);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 16;
+            this.button5.BackgroundImage = global::punto_venta.Properties.Resources.icon_ventas;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Location = new System.Drawing.Point(200, 9);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 34);
+            this.button5.TabIndex = 3;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // button4
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 26);
+            this.button4.BackgroundImage = global::punto_venta.Properties.Resources.icon_datos2;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(138, 10);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(46, 34);
+            this.button4.TabIndex = 2;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::punto_venta.Properties.Resources.icon_empleados;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(76, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 33);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.AutoSize = true;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(6, 10);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(52, 33);
+            this.button3.TabIndex = 0;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // inventarioAdmin
             // 
@@ -539,6 +542,7 @@
             this.Name = "inventarioAdmin";
             this.Tag = "";
             this.Text = "inventarioAdmin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.inventarioAdmin_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbBusqueda.ResumeLayout(false);

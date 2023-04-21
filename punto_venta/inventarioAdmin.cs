@@ -35,6 +35,21 @@ namespace punto_venta
                 tbBuscar.ForeColor = Color.Silver;
             }
         }
-   
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inventarioAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            add_prod add_Prod = new add_prod();
+            add_Prod.ShowDialog();
+        }
     }
 }
