@@ -63,8 +63,9 @@ namespace punto_venta
                 if (count == 1){
                     //MessageBox.Show("Success", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Hide();
-                    Form1 frm = new Form1(usrid);
-                    frm.Show();
+                    //Form1 frm = new Form1(usrid);
+                    inventarioAdmin inventarioAdmin = new inventarioAdmin();
+                    inventarioAdmin.Show();
                 }
                 else
                 {

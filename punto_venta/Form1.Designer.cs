@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_productos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +45,17 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_productos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,55 +86,6 @@
             this.label5.Size = new System.Drawing.Size(133, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "¡bienvenido userdeprueba!";
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::punto_venta.Properties.Resources.icon_ventas;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(164, 10);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 34);
-            this.button5.TabIndex = 3;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::punto_venta.Properties.Resources.icon_datos2;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(112, 10);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(46, 34);
-            this.button4.TabIndex = 2;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::punto_venta.Properties.Resources.icon_empleados;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(61, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 33);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_productos
-            // 
-            this.btn_productos.AutoSize = true;
-            this.btn_productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_productos.BackgroundImage")));
-            this.btn_productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_productos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_productos.Enabled = false;
-            this.btn_productos.Location = new System.Drawing.Point(6, 10);
-            this.btn_productos.Name = "btn_productos";
-            this.btn_productos.Size = new System.Drawing.Size(52, 33);
-            this.btn_productos.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btn_productos, "Productos");
-            this.btn_productos.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -259,26 +210,6 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 6;
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::punto_venta.Properties.Resources.icon_cancel;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(113, 319);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 54);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::punto_venta.Properties.Resources.icon_add;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(25, 319);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 54);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -315,6 +246,75 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo de barras";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::punto_venta.Properties.Resources.icon_cancel;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(113, 319);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(64, 54);
+            this.button3.TabIndex = 5;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::punto_venta.Properties.Resources.icon_add;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(25, 319);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(62, 54);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::punto_venta.Properties.Resources.icon_ventas;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Location = new System.Drawing.Point(164, 10);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 34);
+            this.button5.TabIndex = 3;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::punto_venta.Properties.Resources.icon_datos2;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(112, 10);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(46, 34);
+            this.button4.TabIndex = 2;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::punto_venta.Properties.Resources.icon_empleados;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(61, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 33);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_productos
+            // 
+            this.btn_productos.AutoSize = true;
+            this.btn_productos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_productos.BackgroundImage")));
+            this.btn_productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_productos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_productos.Enabled = false;
+            this.btn_productos.Location = new System.Drawing.Point(6, 10);
+            this.btn_productos.Name = "btn_productos";
+            this.btn_productos.Size = new System.Drawing.Size(52, 33);
+            this.btn_productos.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btn_productos, "Productos");
+            this.btn_productos.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
