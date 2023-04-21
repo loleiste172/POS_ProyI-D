@@ -1,4 +1,5 @@
 *.vsidx
+*.cache
 # User-specific files
 *.rsuser
 *.suo
