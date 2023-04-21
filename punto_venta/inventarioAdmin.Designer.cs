@@ -58,6 +58,8 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agotado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbViewProduct = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbDescripcion = new System.Windows.Forms.Label();
             this.bttEliminarProducto = new System.Windows.Forms.Button();
             this.bttGuardarCambios = new System.Windows.Forms.Button();
             this.txtAgotado = new System.Windows.Forms.Label();
@@ -73,8 +75,6 @@
             this.lbCategoria = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.imgProduct = new System.Windows.Forms.PictureBox();
-            this.lbDescripcion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
@@ -352,6 +352,7 @@
             // 
             // gbViewProduct
             // 
+            this.gbViewProduct.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.gbViewProduct.Controls.Add(this.textBox1);
             this.gbViewProduct.Controls.Add(this.lbDescripcion);
             this.gbViewProduct.Controls.Add(this.bttEliminarProducto);
@@ -369,12 +370,28 @@
             this.gbViewProduct.Controls.Add(this.lbCategoria);
             this.gbViewProduct.Controls.Add(this.lbNombre);
             this.gbViewProduct.Controls.Add(this.imgProduct);
-            this.gbViewProduct.Location = new System.Drawing.Point(746, 86);
+            this.gbViewProduct.Location = new System.Drawing.Point(746, 105);
             this.gbViewProduct.Name = "gbViewProduct";
             this.gbViewProduct.Size = new System.Drawing.Size(247, 450);
             this.gbViewProduct.TabIndex = 10;
             this.gbViewProduct.TabStop = false;
             this.gbViewProduct.Text = "Vizualizar Producto";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 321);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 20);
+            this.textBox1.TabIndex = 16;
+            // 
+            // lbDescripcion
+            // 
+            this.lbDescripcion.AutoSize = true;
+            this.lbDescripcion.Location = new System.Drawing.Point(7, 324);
+            this.lbDescripcion.Name = "lbDescripcion";
+            this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
+            this.lbDescripcion.TabIndex = 15;
+            this.lbDescripcion.Text = "Descripción:";
             // 
             // bttEliminarProducto
             // 
@@ -504,26 +521,10 @@
             this.imgProduct.TabIndex = 0;
             this.imgProduct.TabStop = false;
             // 
-            // lbDescripcion
-            // 
-            this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(7, 324);
-            this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.lbDescripcion.TabIndex = 15;
-            this.lbDescripcion.Text = "Descripción:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(75, 321);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 16;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // inventarioAdmin
             // 
