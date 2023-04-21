@@ -29,5 +29,6 @@ namespace punto_venta
         {
             Close();
         }
+        //Abdi estuvo aquí
     }
 }
