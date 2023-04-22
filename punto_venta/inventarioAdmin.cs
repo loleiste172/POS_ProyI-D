@@ -51,5 +51,33 @@ namespace punto_venta
             add_prod add_Prod = new add_prod();
             add_Prod.ShowDialog();
         }
+
+        private void inventarioAdmin_Load(object sender, EventArgs e)
+        {
+            actualizarTablaProductos();
+
+        }
+
+        //Método para ver los productos en el dataGrid
+        private void actualizarTablaProductos()
+        {
+            Inventario Inventario = new Inventario();
+            SQLiteDataReader datos = Inventario.getProducts();
+            int rowEscribir;
+            while (datos.Read())
+            {
+                rowEscribir = dgv_productos.Rows.Count;
+                dgv_productos.Rows.Add();
+                //id, nombre, categoria, precio, cantidad, descripcion, agotado
+                dgv_productos.Rows[rowEscribir].Cells[0].Value = Convert.ToString(datos["id"]);
+                dgv_productos.Rows[rowEscribir].Cells[1].Value = Convert.ToString(datos["nombre"]);
+                dgv_productos.Rows[rowEscribir].Cells[2].Value = Convert.ToString(datos["categoria"]);
+                dgv_productos.Rows[rowEscribir].Cells[3].Value = Convert.ToString(datos["precio"]);
+                dgv_productos.Rows[rowEscribir].Cells[4].Value = Convert.ToString(datos["cantidad"]);
+                dgv_productos.Rows[rowEscribir].Cells[6].Value = Convert.ToString(datos["descripcion"]);
+                dgv_productos.Rows[rowEscribir].Cells[7].Value = Convert.ToString(datos["agotado"]);
+            }
+            Inventario.finish();//Cierra la conexión con la db
+        }
     }
 }

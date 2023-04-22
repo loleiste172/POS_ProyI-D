@@ -65,6 +65,8 @@ namespace punto_venta
                     Hide();
                     //Form1 frm = new Form1(usrid);
                     inventarioAdmin inventarioAdmin = new inventarioAdmin();
+                    //pruebaDataBase prueba = new pruebaDataBase();
+                    //prueba.Show();
                     inventarioAdmin.Show();
                 }
                 else
