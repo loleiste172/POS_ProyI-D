@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nombre_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.precio_tb = new System.Windows.Forms.TextBox();
+            this.cantidad_tb = new System.Windows.Forms.TextBox();
+            this.categoria_cb = new System.Windows.Forms.ComboBox();
+            this.descripcion_tb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addbtn = new System.Windows.Forms.Button();
+            this.cancelbtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,12 +55,12 @@
             this.openFileDialog1.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;";
             this.openFileDialog1.Title = "Elija una imagen";
             // 
-            // textBox1
+            // nombre_tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 0;
+            this.nombre_tb.Location = new System.Drawing.Point(27, 43);
+            this.nombre_tb.Name = "nombre_tb";
+            this.nombre_tb.Size = new System.Drawing.Size(216, 20);
+            this.nombre_tb.TabIndex = 0;
             // 
             // label1
             // 
@@ -98,39 +98,44 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Categoria";
             // 
-            // textBox2
+            // precio_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.precio_tb.Location = new System.Drawing.Point(27, 93);
+            this.precio_tb.Name = "precio_tb";
+            this.precio_tb.Size = new System.Drawing.Size(100, 20);
+            this.precio_tb.TabIndex = 5;
             // 
-            // textBox3
+            // cantidad_tb
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.cantidad_tb.Location = new System.Drawing.Point(143, 93);
+            this.cantidad_tb.Name = "cantidad_tb";
+            this.cantidad_tb.Size = new System.Drawing.Size(100, 20);
+            this.cantidad_tb.TabIndex = 6;
             // 
-            // comboBox1
+            // categoria_cb
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Articulos de limpieza",
-            "Comida",
-            "Miscelaneo"});
-            this.comboBox1.Location = new System.Drawing.Point(27, 150);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 21);
-            this.comboBox1.TabIndex = 7;
+            this.categoria_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoria_cb.FormattingEnabled = true;
+            this.categoria_cb.Items.AddRange(new object[] {
+            "Alimentos y bebidas",
+            "Bimbo",
+            "Cosméticos",
+            "Dulces",
+            "Frituras",
+            "Mascotas",
+            "Miscelaneo",
+            "Productos de limpieza"});
+            this.categoria_cb.Location = new System.Drawing.Point(27, 150);
+            this.categoria_cb.Name = "categoria_cb";
+            this.categoria_cb.Size = new System.Drawing.Size(216, 21);
+            this.categoria_cb.TabIndex = 7;
             // 
-            // textBox4
+            // descripcion_tb
             // 
-            this.textBox4.Location = new System.Drawing.Point(27, 215);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(216, 20);
-            this.textBox4.TabIndex = 8;
+            this.descripcion_tb.Location = new System.Drawing.Point(27, 215);
+            this.descripcion_tb.Name = "descripcion_tb";
+            this.descripcion_tb.Size = new System.Drawing.Size(216, 20);
+            this.descripcion_tb.TabIndex = 8;
             // 
             // label5
             // 
@@ -181,45 +186,46 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // addbtn
             // 
-            this.button2.Location = new System.Drawing.Point(274, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Añadir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addbtn.Location = new System.Drawing.Point(274, 255);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(75, 23);
+            this.addbtn.TabIndex = 13;
+            this.addbtn.Text = "Añadir";
+            this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
-            // button3
+            // cancelbtn
             // 
-            this.button3.Location = new System.Drawing.Point(372, 255);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.cancelbtn.Location = new System.Drawing.Point(372, 255);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelbtn.TabIndex = 14;
+            this.cancelbtn.Text = "Cancelar";
+            this.cancelbtn.UseVisualStyleBackColor = true;
+            this.cancelbtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // add_prod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 311);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cancelbtn);
+            this.Controls.Add(this.addbtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.descripcion_tb);
+            this.Controls.Add(this.categoria_cb);
+            this.Controls.Add(this.cantidad_tb);
+            this.Controls.Add(this.precio_tb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nombre_tb);
             this.MaximizeBox = false;
             this.Name = "add_prod";
             this.Text = "Añadir un nuevo producto";
@@ -233,21 +239,21 @@
         #endregion
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nombre_tb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox precio_tb;
+        private System.Windows.Forms.TextBox cantidad_tb;
+        private System.Windows.Forms.ComboBox categoria_cb;
+        private System.Windows.Forms.TextBox descripcion_tb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.Button cancelbtn;
     }
 }
