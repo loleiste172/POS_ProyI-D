@@ -42,6 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.bttRefresh = new System.Windows.Forms.Button();
             this.rbttProductAgotados = new System.Windows.Forms.RadioButton();
             this.rbttVerTodo = new System.Windows.Forms.RadioButton();
             this.rbttProductExistentes = new System.Windows.Forms.RadioButton();
@@ -57,15 +58,15 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agotado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbViewProduct = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.categoria_cb = new System.Windows.Forms.ComboBox();
+            this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.bttEliminarProducto = new System.Windows.Forms.Button();
             this.bttGuardarCambios = new System.Windows.Forms.Button();
             this.txtAgotado = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.Label();
-            this.tbCantidad = new System.Windows.Forms.TextBox();
             this.tbPrecio = new System.Windows.Forms.TextBox();
-            this.tbCategoria = new System.Windows.Forms.TextBox();
+            this.tbCantidad = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.lbAgotado = new System.Windows.Forms.Label();
             this.lbFechaIngreso = new System.Windows.Forms.Label();
@@ -76,6 +77,8 @@
             this.imgProduct = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.button6 = new System.Windows.Forms.Button();
+            this.lbID = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
@@ -211,6 +214,7 @@
             // 
             // gbBusqueda
             // 
+            this.gbBusqueda.Controls.Add(this.bttRefresh);
             this.gbBusqueda.Controls.Add(this.rbttProductAgotados);
             this.gbBusqueda.Controls.Add(this.rbttVerTodo);
             this.gbBusqueda.Controls.Add(this.rbttProductExistentes);
@@ -222,6 +226,17 @@
             this.gbBusqueda.TabIndex = 7;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Buscar:";
+            // 
+            // bttRefresh
+            // 
+            this.bttRefresh.BackgroundImage = global::punto_venta.Properties.Resources.refresh;
+            this.bttRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttRefresh.Location = new System.Drawing.Point(587, 42);
+            this.bttRefresh.Name = "bttRefresh";
+            this.bttRefresh.Size = new System.Drawing.Size(40, 29);
+            this.bttRefresh.TabIndex = 5;
+            this.bttRefresh.UseVisualStyleBackColor = true;
+            this.bttRefresh.Click += new System.EventHandler(this.bttRefresh_Click);
             // 
             // rbttProductAgotados
             // 
@@ -301,6 +316,7 @@
             this.dgv_productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_productos.Size = new System.Drawing.Size(640, 361);
             this.dgv_productos.TabIndex = 8;
+            this.dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_productos_CellContentClick);
             // 
             // ID
             // 
@@ -344,15 +360,17 @@
             // 
             // gbViewProduct
             // 
-            this.gbViewProduct.Controls.Add(this.textBox1);
+            this.gbViewProduct.Controls.Add(this.txtid);
+            this.gbViewProduct.Controls.Add(this.lbID);
+            this.gbViewProduct.Controls.Add(this.categoria_cb);
+            this.gbViewProduct.Controls.Add(this.tbDescripcion);
             this.gbViewProduct.Controls.Add(this.lbDescripcion);
             this.gbViewProduct.Controls.Add(this.bttEliminarProducto);
             this.gbViewProduct.Controls.Add(this.bttGuardarCambios);
             this.gbViewProduct.Controls.Add(this.txtAgotado);
             this.gbViewProduct.Controls.Add(this.txtFecha);
-            this.gbViewProduct.Controls.Add(this.tbCantidad);
             this.gbViewProduct.Controls.Add(this.tbPrecio);
-            this.gbViewProduct.Controls.Add(this.tbCategoria);
+            this.gbViewProduct.Controls.Add(this.tbCantidad);
             this.gbViewProduct.Controls.Add(this.tbNombre);
             this.gbViewProduct.Controls.Add(this.lbAgotado);
             this.gbViewProduct.Controls.Add(this.lbFechaIngreso);
@@ -368,12 +386,30 @@
             this.gbViewProduct.TabStop = false;
             this.gbViewProduct.Text = "Vizualizar Producto";
             // 
-            // textBox1
+            // categoria_cb
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 321);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 16;
+            this.categoria_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoria_cb.FormattingEnabled = true;
+            this.categoria_cb.Items.AddRange(new object[] {
+            "Alimentos y bebidas",
+            "Bimbo",
+            "Cosméticos",
+            "Dulces",
+            "Frituras",
+            "Mascotas",
+            "Miscelaneo",
+            "Productos de limpieza"});
+            this.categoria_cb.Location = new System.Drawing.Point(69, 219);
+            this.categoria_cb.Name = "categoria_cb";
+            this.categoria_cb.Size = new System.Drawing.Size(161, 21);
+            this.categoria_cb.TabIndex = 17;
+            // 
+            // tbDescripcion
+            // 
+            this.tbDescripcion.Location = new System.Drawing.Point(75, 321);
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(155, 20);
+            this.tbDescripcion.TabIndex = 16;
             // 
             // lbDescripcion
             // 
@@ -386,21 +422,25 @@
             // 
             // bttEliminarProducto
             // 
+            this.bttEliminarProducto.Enabled = false;
             this.bttEliminarProducto.Location = new System.Drawing.Point(138, 399);
             this.bttEliminarProducto.Name = "bttEliminarProducto";
             this.bttEliminarProducto.Size = new System.Drawing.Size(92, 35);
             this.bttEliminarProducto.TabIndex = 14;
             this.bttEliminarProducto.Text = "Eliminar Producto";
             this.bttEliminarProducto.UseVisualStyleBackColor = true;
+            this.bttEliminarProducto.Click += new System.EventHandler(this.bttEliminarProducto_Click);
             // 
             // bttGuardarCambios
             // 
+            this.bttGuardarCambios.Enabled = false;
             this.bttGuardarCambios.Location = new System.Drawing.Point(21, 399);
             this.bttGuardarCambios.Name = "bttGuardarCambios";
             this.bttGuardarCambios.Size = new System.Drawing.Size(92, 35);
             this.bttGuardarCambios.TabIndex = 13;
             this.bttGuardarCambios.Text = "Guardar cambios";
             this.bttGuardarCambios.UseVisualStyleBackColor = true;
+            this.bttGuardarCambios.Click += new System.EventHandler(this.bttGuardarCambios_Click);
             // 
             // txtAgotado
             // 
@@ -422,13 +462,6 @@
             this.txtFecha.TabIndex = 11;
             this.txtFecha.Text = "--/--/----";
             // 
-            // tbCantidad
-            // 
-            this.tbCantidad.Location = new System.Drawing.Point(70, 286);
-            this.tbCantidad.Name = "tbCantidad";
-            this.tbCantidad.Size = new System.Drawing.Size(100, 20);
-            this.tbCantidad.TabIndex = 10;
-            // 
             // tbPrecio
             // 
             this.tbPrecio.Location = new System.Drawing.Point(70, 249);
@@ -436,12 +469,12 @@
             this.tbPrecio.Size = new System.Drawing.Size(100, 20);
             this.tbPrecio.TabIndex = 9;
             // 
-            // tbCategoria
+            // tbCantidad
             // 
-            this.tbCategoria.Location = new System.Drawing.Point(70, 218);
-            this.tbCategoria.Name = "tbCategoria";
-            this.tbCategoria.Size = new System.Drawing.Size(100, 20);
-            this.tbCategoria.TabIndex = 8;
+            this.tbCantidad.Location = new System.Drawing.Point(70, 288);
+            this.tbCantidad.Name = "tbCantidad";
+            this.tbCantidad.Size = new System.Drawing.Size(100, 20);
+            this.tbCantidad.TabIndex = 8;
             // 
             // tbNombre
             // 
@@ -528,6 +561,25 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(188, 372);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(21, 13);
+            this.lbID.TabIndex = 18;
+            this.lbID.Text = "ID:";
+            // 
+            // txtid
+            // 
+            this.txtid.AutoSize = true;
+            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.Location = new System.Drawing.Point(212, 371);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(18, 16);
+            this.txtid.TabIndex = 19;
+            this.txtid.Text = "- -";
+            // 
             // inventarioAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,12 +649,15 @@
         private System.Windows.Forms.Button bttGuardarCambios;
         private System.Windows.Forms.Label txtAgotado;
         private System.Windows.Forms.Label txtFecha;
-        private System.Windows.Forms.TextBox tbCantidad;
         private System.Windows.Forms.TextBox tbPrecio;
-        private System.Windows.Forms.TextBox tbCategoria;
+        private System.Windows.Forms.TextBox tbCantidad;
         private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button bttRefresh;
+        private System.Windows.Forms.ComboBox categoria_cb;
+        private System.Windows.Forms.Label txtid;
+        private System.Windows.Forms.Label lbID;
     }
 }

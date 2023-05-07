@@ -8,7 +8,7 @@ namespace punto_venta
 {
     public class Producto
     {
-        private int id;
+        public string id;
         public string nom;
         public string categoria;
         public string precio;
@@ -17,6 +17,15 @@ namespace punto_venta
         private int eliminado;
 
         public Producto(string nom, string cat, string precio, string cant, string desc) {
+            this.nom = nom;
+            this.categoria = cat;
+            this.precio = precio;
+            this.cantidad = cant;
+            this.descripcion = desc;
+        }
+        public Producto(string id, string nom, string cat, string precio, string cant, string desc)
+        {
+            this.id = id;
             this.nom = nom;
             this.categoria = cat;
             this.precio = precio;

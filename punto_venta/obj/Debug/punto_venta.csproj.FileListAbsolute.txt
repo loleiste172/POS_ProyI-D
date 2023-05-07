@@ -80,3 +80,4 @@ C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.inventarioAdmin.r
 C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.add_prod.resources
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.add_prod.resources
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pruebaDataBase.resources
+C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Eliminar_producto.resources

@@ -33,6 +33,15 @@ namespace punto_venta
             }
             return result;
         }
+        public bool updateProduct(Producto producto)
+        {
+            bool result;
+
+            string query = String.Format("UPDATE producto SET nombre = '{1}', categoria = '{2}', precio = '{4}', cantidad = '{3}', descripcion = '{5}' WHERE id ='{0}';"
+                                        , producto.id, producto.nom, producto.categoria, producto.cantidad, producto.precio, producto.descripcion);
+            result = db.executeQuery(query) == true? true: false;
+            return result;
+        }
         public bool deleteProduct(int productid)
         {
             bool result;
@@ -61,6 +70,7 @@ namespace punto_venta
         public void finish()
         {
             db.closeDB();
+            MessageBox.Show("Inventario finished");
         }
     }
 }
