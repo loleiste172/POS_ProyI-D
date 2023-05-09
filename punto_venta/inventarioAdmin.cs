@@ -166,8 +166,9 @@ namespace punto_venta
                 string precio = tbPrecio.Text;
                 string cantidad = tbCantidad.Text;
                 string descrip = tbDescripcion.Text == "" ? "Sin descripción" : tbDescripcion.Text;
+                int agotado = Int32.Parse(cantidad) > 0? 0:1;
 
-                Producto produc = new Producto(id, nom, categoria, precio, cantidad, descrip);
+                Producto produc = new Producto(id, nom, categoria, precio, cantidad, descrip, agotado);
                 //Inventario Inventario = new Inventario();
                 if (myInventario.updateProduct(produc))
                 {
@@ -202,6 +203,68 @@ namespace punto_venta
                 limpiarVisuzalizarProducto();
                 desactivarBttnGuardarEliminar();
 
+            }
+        }
+
+        private void bttBuscar_Click(object sender, EventArgs e)
+        {
+            if(tbBuscar.Text != "Ingrese nombre, categoría o descripción")
+            {
+                int rowEscribir;
+                dgv_productos.Rows.Clear();
+                SQLiteDataReader datos;
+
+                if (rbttVerTodo.Checked)
+                {
+                    datos = myInventario.getProducts(tbBuscar.Text);
+                    while (datos.Read())
+                    {
+                        rowEscribir = dgv_productos.Rows.Count;
+                        dgv_productos.Rows.Add();
+                        //id, nombre, categoria, precio, cantidad, descripcion, agotado
+                        dgv_productos.Rows[rowEscribir].Cells[0].Value = Convert.ToString(datos["id"]);
+                        dgv_productos.Rows[rowEscribir].Cells[1].Value = Convert.ToString(datos["nombre"]);
+                        dgv_productos.Rows[rowEscribir].Cells[2].Value = Convert.ToString(datos["categoria"]);
+                        dgv_productos.Rows[rowEscribir].Cells[3].Value = Convert.ToString(datos["precio"]);
+                        dgv_productos.Rows[rowEscribir].Cells[4].Value = Convert.ToString(datos["cantidad"]);
+                        dgv_productos.Rows[rowEscribir].Cells[6].Value = Convert.ToString(datos["descripcion"]);
+                        dgv_productos.Rows[rowEscribir].Cells[7].Value = datos["agotado"].ToString() == "1" ? "Si" : "No";
+                    }
+                }
+                else if (rbttProductExistentes.Checked)
+                {
+                    datos = myInventario.getProductsNOAgotados(tbBuscar.Text);
+                    while (datos.Read())
+                    {
+                        rowEscribir = dgv_productos.Rows.Count;
+                        dgv_productos.Rows.Add();
+                        //id, nombre, categoria, precio, cantidad, descripcion, agotado
+                        dgv_productos.Rows[rowEscribir].Cells[0].Value = Convert.ToString(datos["id"]);
+                        dgv_productos.Rows[rowEscribir].Cells[1].Value = Convert.ToString(datos["nombre"]);
+                        dgv_productos.Rows[rowEscribir].Cells[2].Value = Convert.ToString(datos["categoria"]);
+                        dgv_productos.Rows[rowEscribir].Cells[3].Value = Convert.ToString(datos["precio"]);
+                        dgv_productos.Rows[rowEscribir].Cells[4].Value = Convert.ToString(datos["cantidad"]);
+                        dgv_productos.Rows[rowEscribir].Cells[6].Value = Convert.ToString(datos["descripcion"]);
+                        dgv_productos.Rows[rowEscribir].Cells[7].Value = datos["agotado"].ToString() == "1" ? "Si" : "No";
+                    }
+                }
+                else if (rbttProductAgotados.Checked)
+                {
+                    datos = myInventario.getProductsAgotados(tbBuscar.Text);
+                    while (datos.Read())
+                    {
+                        rowEscribir = dgv_productos.Rows.Count;
+                        dgv_productos.Rows.Add();
+                        //id, nombre, categoria, precio, cantidad, descripcion, agotado
+                        dgv_productos.Rows[rowEscribir].Cells[0].Value = Convert.ToString(datos["id"]);
+                        dgv_productos.Rows[rowEscribir].Cells[1].Value = Convert.ToString(datos["nombre"]);
+                        dgv_productos.Rows[rowEscribir].Cells[2].Value = Convert.ToString(datos["categoria"]);
+                        dgv_productos.Rows[rowEscribir].Cells[3].Value = Convert.ToString(datos["precio"]);
+                        dgv_productos.Rows[rowEscribir].Cells[4].Value = Convert.ToString(datos["cantidad"]);
+                        dgv_productos.Rows[rowEscribir].Cells[6].Value = Convert.ToString(datos["descripcion"]);
+                        dgv_productos.Rows[rowEscribir].Cells[7].Value = datos["agotado"].ToString() == "1" ? "Si" : "No";
+                    }
+                }
             }
         }
     }

@@ -37,8 +37,8 @@ namespace punto_venta
         {
             bool result;
 
-            string query = String.Format("UPDATE producto SET nombre = '{1}', categoria = '{2}', precio = '{4}', cantidad = '{3}', descripcion = '{5}' WHERE id ='{0}';"
-                                        , producto.id, producto.nom, producto.categoria, producto.cantidad, producto.precio, producto.descripcion);
+            string query = String.Format("UPDATE producto SET nombre = '{1}', categoria = '{2}', precio = '{4}', cantidad = '{3}', descripcion = '{5}', agotado = '{6}' WHERE id ='{0}';"
+                                        , producto.id, producto.nom, producto.categoria, producto.cantidad, producto.precio, producto.descripcion, producto.agotado);
             result = db.executeQuery(query) == true? true: false;
             return result;
         }
@@ -63,6 +63,36 @@ namespace punto_venta
             string query = @"SELECT id, nombre, categoria, precio, cantidad, descripcion, agotado
                             FROM producto
                             WHERE eliminado=0;";
+            SQLiteDataReader dr = db.getData(query);
+            return dr;
+
+        }
+        public SQLiteDataReader getProducts(string busqueda)
+        {
+            string query = string.Format( @"SELECT id, nombre, categoria, precio, cantidad, descripcion, agotado
+                            FROM producto
+                            WHERE nombre LIKE '%{0}%' OR categoria LIKE '%{0}%' OR descripcion LIKE '%{0}%';"
+                            , busqueda);
+            SQLiteDataReader dr = db.getData(query);
+            return dr;
+
+        }
+        public SQLiteDataReader getProductsAgotados(string busqueda)
+        {
+            string query = string.Format(@"SELECT id, nombre, categoria, precio, cantidad, descripcion, agotado
+                            FROM producto
+                            WHERE agotado = 1 AND (nombre LIKE '%{0}%' OR categoria LIKE '%{0}%' OR descripcion LIKE '%{0}%');"
+                            , busqueda);
+            SQLiteDataReader dr = db.getData(query);
+            return dr;
+
+        }
+        public SQLiteDataReader getProductsNOAgotados(string busqueda)
+        {
+            string query = string.Format(@"SELECT id, nombre, categoria, precio, cantidad, descripcion, agotado
+                            FROM producto
+                            WHERE agotado = 0 AND (nombre LIKE '%{0}%' OR categoria LIKE '%{0}%' OR descripcion LIKE '%{0}%');"
+                            , busqueda);
             SQLiteDataReader dr = db.getData(query);
             return dr;
 

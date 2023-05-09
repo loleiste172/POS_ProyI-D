@@ -58,6 +58,8 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agotado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbViewProduct = new System.Windows.Forms.GroupBox();
+            this.txtid = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.categoria_cb = new System.Windows.Forms.ComboBox();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.lbDescripcion = new System.Windows.Forms.Label();
@@ -77,8 +79,6 @@
             this.imgProduct = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.button6 = new System.Windows.Forms.Button();
-            this.lbID = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
@@ -278,6 +278,7 @@
             this.bttBuscar.TabIndex = 1;
             this.bttBuscar.Text = "Buscar";
             this.bttBuscar.UseVisualStyleBackColor = true;
+            this.bttBuscar.Click += new System.EventHandler(this.bttBuscar_Click);
             // 
             // tbBuscar
             // 
@@ -385,6 +386,25 @@
             this.gbViewProduct.TabIndex = 10;
             this.gbViewProduct.TabStop = false;
             this.gbViewProduct.Text = "Vizualizar Producto";
+            // 
+            // txtid
+            // 
+            this.txtid.AutoSize = true;
+            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.Location = new System.Drawing.Point(212, 371);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(18, 16);
+            this.txtid.TabIndex = 19;
+            this.txtid.Text = "- -";
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(188, 372);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(21, 13);
+            this.lbID.TabIndex = 18;
+            this.lbID.Text = "ID:";
             // 
             // categoria_cb
             // 
@@ -560,25 +580,6 @@
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // lbID
-            // 
-            this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(188, 372);
-            this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(21, 13);
-            this.lbID.TabIndex = 18;
-            this.lbID.Text = "ID:";
-            // 
-            // txtid
-            // 
-            this.txtid.AutoSize = true;
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(212, 371);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(18, 16);
-            this.txtid.TabIndex = 19;
-            this.txtid.Text = "- -";
             // 
             // inventarioAdmin
             // 
