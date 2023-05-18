@@ -166,6 +166,7 @@
             this.button5.Size = new System.Drawing.Size(45, 34);
             this.button5.TabIndex = 3;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -361,6 +362,7 @@
             // 
             // gbViewProduct
             // 
+            this.gbViewProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbViewProduct.Controls.Add(this.txtid);
             this.gbViewProduct.Controls.Add(this.lbID);
             this.gbViewProduct.Controls.Add(this.categoria_cb);
@@ -393,7 +395,7 @@
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(212, 371);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(18, 16);
+            this.txtid.Size = new System.Drawing.Size(19, 16);
             this.txtid.TabIndex = 19;
             this.txtid.Text = "- -";
             // 
@@ -468,7 +470,7 @@
             this.txtAgotado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgotado.Location = new System.Drawing.Point(65, 371);
             this.txtAgotado.Name = "txtAgotado";
-            this.txtAgotado.Size = new System.Drawing.Size(18, 16);
+            this.txtAgotado.Size = new System.Drawing.Size(19, 16);
             this.txtAgotado.TabIndex = 12;
             this.txtAgotado.Text = "- -";
             // 
@@ -478,7 +480,7 @@
             this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.Location = new System.Drawing.Point(107, 354);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(47, 16);
+            this.txtFecha.Size = new System.Drawing.Size(48, 16);
             this.txtFecha.TabIndex = 11;
             this.txtFecha.Text = "--/--/----";
             // 
@@ -595,6 +597,7 @@
             this.Name = "inventarioAdmin";
             this.Tag = "";
             this.Text = "inventarioAdmin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.inventarioAdmin_FormClosing);
             this.Load += new System.EventHandler(this.inventarioAdmin_Load);
             this.groupBox1.ResumeLayout(false);

@@ -267,5 +267,12 @@ namespace punto_venta
                 }
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form4 formVentas = new Form4();
+            formVentas.Show();
+        }
     }
 }

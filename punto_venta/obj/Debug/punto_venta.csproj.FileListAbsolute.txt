@@ -81,3 +81,32 @@ C:\Users\USER\Desktop\proyid\punto_venta\obj\Debug\punto_venta.add_prod.resource
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.add_prod.resources
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pruebaDataBase.resources
 C:\Users\abdie\Documents\Primavera 2023\Proyectos I+D\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Eliminar_producto.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\punto_venta.exe.config
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\punto_venta.exe
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\punto_venta.pdb
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.dll
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.SqlServer.dll
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\MD5.dll
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.dll
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.EF6.dll
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.Linq.dll
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.xml
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.SqlServer.xml
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.xml
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csprojAssemblyReference.cache
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.add_prod.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Eliminar_producto.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form1.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form2.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form3.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form4.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form5.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.inventarioAdmin.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pag_empleados.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Properties.Resources.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pruebaDataBase.resources
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.GenerateResource.cache
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.CoreCompileInputs.cache
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.CopyComplete
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.exe
+D:\LUIS\8VO SEMESTRE\Proyectos\puntodeventa\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pdb
