@@ -20,12 +20,12 @@ namespace punto_venta
             InitializeComponent();
             conn = new SQLiteConnection("Data Source=punto_venta.db");
         }
-       
-       
-      
+
+
+
         private void Form2_Load(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -52,22 +52,20 @@ namespace punto_venta
 
                 int count = 0;
                 int usrid = 0;
-                
+
                 while (dr.Read())
                 {
                     //usrid = (int)dr["id"];
-                    var iid= dr["id"];
+                    var iid = dr["id"];
                     usrid = Convert.ToInt32(iid);
                     count++;
                 }
-                if (count == 1){
+                if (count == 1)
+                {
                     //MessageBox.Show("Success", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Hide();
-                    //Form1 frm = new Form1(usrid);
-                    inventarioAdmin inventarioAdmin = new inventarioAdmin();
-                    //pruebaDataBase prueba = new pruebaDataBase();
-                    //prueba.Show();
-                    inventarioAdmin.Show();
+                    inventarioAdmin frm = new inventarioAdmin();
+                    frm.Show();
                 }
                 else
                 {
@@ -86,6 +84,11 @@ namespace punto_venta
             {
                 Application.Exit();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

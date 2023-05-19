@@ -36,8 +36,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,16 +117,28 @@
             this.btn_productos.Size = new System.Drawing.Size(52, 33);
             this.btn_productos.TabIndex = 4;
             this.btn_productos.UseVisualStyleBackColor = true;
+            this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 67);
+            this.groupBox2.Location = new System.Drawing.Point(55, 82);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 371);
+            this.groupBox2.Size = new System.Drawing.Size(678, 305);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::punto_venta.Properties.Resources.icon_add;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(633, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 30);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -136,21 +148,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(121, 30);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(764, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(447, 317);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::punto_venta.Properties.Resources.icon_add;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(735, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 30);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 

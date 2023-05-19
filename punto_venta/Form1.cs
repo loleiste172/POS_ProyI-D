@@ -104,7 +104,7 @@ namespace punto_venta
 
         private void button1_Click(object sender, EventArgs e)//boton empleados
         {
-            pag_empleados pag_Empleados = new pag_empleados(user_actual.id_usr);
+            pag_empleados pag_Empleados = new pag_empleados();
             pag_Empleados.Show();
             Hide();
         }

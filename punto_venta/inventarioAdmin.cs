@@ -13,13 +13,31 @@ namespace punto_venta
 {
     public partial class inventarioAdmin : Form
     {
+
+        //int id_user = 1;
+        //publicDataUser user_actual;
+        ////el userID proveera el nivel de acceso del usuario
+        //SQLiteConnection conn;
+
+
         private Inventario myInventario;
         public inventarioAdmin()
         {
             InitializeComponent();
-            myInventario = new Inventario();
+           myInventario = new Inventario();
+
+            //codigo de lalo
+            
+            //id_user = usr_id;
+            //InitializeComponent();
+            //conn = new SQLiteConnection("Data Source=punto_venta.db");
+            //user_actual = new publicDataUser();
+            //user_actual = getusrdata(id_user);
+            
+
         }
 
+       
         private void tbBuscar_enter(object sender, EventArgs e)
         {
             if (tbBuscar.Text == "Ingrese nombre, categoría o descripción")
@@ -60,6 +78,19 @@ namespace punto_venta
         private void inventarioAdmin_Load(object sender, EventArgs e)
         {
             actualizarTablaProductos(myInventario);
+            //if (id_user == 0)
+            //{
+            //    MessageBox.Show("El perfil seleccionado tiene un error, se ha notificado al administrador y se tomaran las acciones correspondientes", "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    Application.Exit();
+            //}
+
+            //label5.Text = "¡Bienvenido, " + user_actual.usrname + "!";
+
+            //if (user_actual.nivel != 1)
+            //{
+            //    button2.Enabled = false;
+            //    button4.Enabled = false;
+            //}
 
         }
 
@@ -267,5 +298,66 @@ namespace punto_venta
                 }
             }
         }
+        //CODIGO DE LALO
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pag_empleados pag_Empleados = new pag_empleados();
+            pag_Empleados.Show();
+            Hide();
+
+        }
+
+
+
+        //public publicDataUser getusrdata(int usr_id)
+        //{
+        //    publicDataUser ret = new publicDataUser();
+        //    string sql = @"SELECT usuario, nivel, atencion FROM usuarios WHERE id=" + usr_id;
+        //    conn.Open();
+        //    var con = new SQLiteCommand(sql, conn);
+        //    con.ExecuteNonQuery();
+        //    SQLiteDataReader dr = con.ExecuteReader();
+
+        //    while (dr.Read())
+        //    {
+        //        ret.id_usr = usr_id;
+        //        ret.usrname = Convert.ToString(dr["usuario"]);
+        //        ret.nivel = Convert.ToInt32(dr["nivel"]);
+        //        ret.atencion = Convert.ToInt32(dr["atencion"]);
+
+        //        break;
+        //    }
+
+
+        //    conn.Close();
+        //    return ret;
+        //}
+
+        public class publicDataUser
+        {
+            public int id_usr { get; set; }
+            public string usrname { get; set; }
+            public int nivel { get; set; }
+            public int atencion { get; set; }
+            public string nombre { get; set; }
+            public string apellidoP { get; set; }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+
+
+    
+
+
+
 }

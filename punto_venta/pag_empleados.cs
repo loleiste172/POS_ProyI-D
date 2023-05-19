@@ -13,20 +13,20 @@ namespace punto_venta
 {
     public partial class pag_empleados : Form
     {
-        publicDataUser user_actual;
+        //publicDataUser user_actual;
         SQLiteConnection conn;
-        int idusr = 0;
-        public pag_empleados(int iduser)
+        //int idusr = 0;
+        public pag_empleados()
         {
             InitializeComponent();
-            user_actual = new publicDataUser();
-            idusr = iduser;
+            //user_actual = new publicDataUser();
+            //idusr = iduser;
             conn = new SQLiteConnection("Data Source=punto_venta.db");
         }
 
         private void pag_empleados_Load(object sender, EventArgs e)
         {
-            user_actual = getusrdata(idusr);
+            //user_actual = getusrdata(idusr);
             llenarTablaEmpleados();
         }
         private void llenarTablaEmpleados()
@@ -75,6 +75,18 @@ namespace punto_venta
         {
             Form3 form3 = new Form3();
             form3.ShowDialog();
+
+        }
+
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+            inventarioAdmin inventarioAdmin = new inventarioAdmin();
+            inventarioAdmin.Show();
+            Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -139,6 +139,7 @@
     <Compile Include="pag_empleados.Designer.cs">
       <DependentUpon>pag_empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Persona.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
