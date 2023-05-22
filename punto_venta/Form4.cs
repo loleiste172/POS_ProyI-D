@@ -239,36 +239,51 @@ namespace punto_venta
                         //totallbl.Text = suma2.ToString();
                         totallbl.Text = suma.ToString();*/
                     }
+
+                    foreach (DataGridViewRow row in dgv_venta.Rows)
+                    {
+                        if (row.Cells[5].Value != null)
+                        {
+                            decimal valor = Convert.ToDecimal(row.Cells[5].Value);
+                            precioTotal += valor;
+                            precioTotal = Math.Abs(precioTotal);
+                            //totallbl2.Text = precioTotal.ToString();
+                            totallbl.Text = precioTotal.ToString();
+
+                        }
+
+
+                    }
                 }
                 else
                 {
-                    for (int i = 0; i < dgv_venta.Rows.Count; i++)
-                    {
-                        // Accede al valor de la segunda columna en la fila actual
+                    /* for (int i = 0; i < dgv_venta.Rows.Count; i++)
+                     {
+                         // Accede al valor de la segunda columna en la fila actual
 
-                        //if (dgv_venta.Rows[i].Cells[2].Value != null && decimal.TryParse(dgv_venta.Rows[i].Cells[2].Value.ToString(), out total_venta))
-                        //{
-                        // Si el valor es numérico, lo sumas a la variable 'suma'
-                        //  resta -= total_venta;
+                         //if (dgv_venta.Rows[i].Cells[2].Value != null && decimal.TryParse(dgv_venta.Rows[i].Cells[2].Value.ToString(), out total_venta))
+                         //{
+                         // Si el valor es numérico, lo sumas a la variable 'suma'
+                         //  resta -= total_venta;
 
-                        if (cantidad == 1)
-                    {
-                        //Actualiza el total
-                        cantidadd = int.Parse(dgv_venta.Rows[i].Cells[3].Value.ToString());
-                        precio = Convert.ToDecimal(dgv_venta.Rows[i].Cells[2].Value);
-                        total = precio * cantidadd;
-                        dgv_venta.Rows[i].Cells[5].Value = total;
-                        precioTotal = Convert.ToDecimal(dgv_venta.Rows[i].Cells[5].Value);
+                         if (cantidad == 1)
+                     {
+                         //Actualiza el total
+                         cantidadd = int.Parse(dgv_venta.Rows[i].Cells[3].Value.ToString());
+                         precio = Convert.ToDecimal(dgv_venta.Rows[i].Cells[2].Value);
+                         total = precio * cantidadd;
+                         dgv_venta.Rows[i].Cells[5].Value = total;
+                         precioTotal = Convert.ToDecimal(dgv_venta.Rows[i].Cells[5].Value);
 
-                            //total = precio * cantidadd;
-                            //dgv_venta.Rows[i].Cells[5].Value = total;
-                            //suma2 = Convert.ToDecimal(totallbl.Text);
-                            suma = precioTotal - precio;
-                        //totallbl.Text = suma2.ToString();
-                        totallbl.Text = suma.ToString();
-                    }
-                        //}
-                    }
+                             //total = precio * cantidadd;
+                             //dgv_venta.Rows[i].Cells[5].Value = total;
+                             //suma2 = Convert.ToDecimal(totallbl.Text);
+                             suma = precioTotal - precio;
+                         //totallbl.Text = suma2.ToString();
+                         totallbl.Text = suma.ToString();
+                     }
+                         //}
+                     }*/
 
                     // Muestra el resultado de la suma en el TextBox
                     // totallbl.Text = resta.ToString();
@@ -295,22 +310,45 @@ namespace punto_venta
                             totallbl.Text = precioTotal.ToString();
                         }
                     }*/
-                    dgv_venta.Rows.RemoveAt(FilaSelected);
+                        dgv_venta.Rows.RemoveAt(FilaSelected);
+                    foreach (DataGridViewRow row in dgv_venta.Rows)
+                        {
+                            if (row.Cells[5].Value != null)
+                            {
+                                decimal valor = Convert.ToDecimal(row.Cells[5].Value);
+                                precioTotal += valor;
+                                precioTotal = Math.Abs(precioTotal);
+                 //               totallbl3.Text = precioTotal.ToString();
+                                totallbl.Text = precioTotal.ToString();
+                            }
+                        
+                    }
                 }
+                /*
 
                 foreach (DataGridViewRow row in dgv_venta.Rows)
                 {
                     if (row.Cells[5].Value != null)
                     {
                         decimal valor = Convert.ToDecimal(row.Cells[5].Value);
-                        precioTotal -= valor;
+                        precioTotal += valor;
                         precioTotal = Math.Abs(precioTotal);
+                        totallbl2.Text = precioTotal.ToString();
                         totallbl.Text = precioTotal.ToString();
+                        
                     }
+                    
+                    
                 }
+                */
+                //totallbl2.Text = suma.ToString();
             }
 
-
+            if (dgv_venta.SelectedRows.Count == 0)
+            {
+               // totallbl2.Text = suma.ToString();
+                totallbl.Text = suma.ToString();
+            }
         }
     }
 }
