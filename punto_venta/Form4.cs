@@ -350,5 +350,24 @@ namespace punto_venta
                 totallbl.Text = suma.ToString();
             }
         }
+
+        private void confirmar_Click(object sender, EventArgs e)
+        {
+            decimal total = Convert.ToDecimal(totallbl.Text);
+            MessageBox.Show("El total de su compra es: " + total, "Compra exitosa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+            foreach (DataGridViewRow fila in dgv_venta.Rows.Cast<DataGridViewRow>().ToArray())
+            {
+                dgv_venta.Rows.Remove(fila);
+            }
+            /*
+                for (int i = 0; i < dgv_venta.Rows.Count; i++)
+            {
+                dgv_venta.Rows.RemoveAt(i);
+            }
+                */
+            totallbl.Text = "0";
+        }
     }
 }

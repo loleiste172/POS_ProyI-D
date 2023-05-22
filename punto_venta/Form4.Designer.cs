@@ -35,7 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.totallbl2 = new System.Windows.Forms.Label();
             this.totallbl = new System.Windows.Forms.Label();
             this.lb_productos = new System.Windows.Forms.Label();
             this.lb_venta = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             this.lb_total = new System.Windows.Forms.Label();
             this.eliminar = new System.Windows.Forms.Button();
             this.agregar = new System.Windows.Forms.Button();
-            this.totallbl3 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_venta)).BeginInit();
@@ -107,8 +105,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.totallbl3);
-            this.groupBox2.Controls.Add(this.totallbl2);
             this.groupBox2.Controls.Add(this.totallbl);
             this.groupBox2.Controls.Add(this.lb_productos);
             this.groupBox2.Controls.Add(this.lb_venta);
@@ -121,11 +117,6 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
-            // 
-            // totallbl2
-            // 
-            resources.ApplyResources(this.totallbl2, "totallbl2");
-            this.totallbl2.Name = "totallbl2";
             // 
             // totallbl
             // 
@@ -239,6 +230,7 @@
             resources.ApplyResources(this.confirmar, "confirmar");
             this.confirmar.Name = "confirmar";
             this.confirmar.UseVisualStyleBackColor = true;
+            this.confirmar.Click += new System.EventHandler(this.confirmar_Click);
             // 
             // lb_total
             // 
@@ -258,11 +250,6 @@
             this.agregar.Name = "agregar";
             this.agregar.UseVisualStyleBackColor = true;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
-            // 
-            // totallbl3
-            // 
-            resources.ApplyResources(this.totallbl3, "totallbl3");
-            this.totallbl3.Name = "totallbl3";
             // 
             // Form4
             // 
@@ -305,13 +292,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.Label totallbl;
-        private System.Windows.Forms.Label totallbl2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Can;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.Label totallbl3;
     }
 }
