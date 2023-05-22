@@ -39,21 +39,23 @@
             this.lb_venta = new System.Windows.Forms.Label();
             this.dgv_venta = new System.Windows.Forms.DataGridView();
             this.dgv_productos = new System.Windows.Forms.DataGridView();
-            this.confirmar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lb_total = new System.Windows.Forms.Label();
-            this.eliminar = new System.Windows.Forms.Button();
-            this.agregar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confirmar = new System.Windows.Forms.Button();
+            this.lb_total = new System.Windows.Forms.Label();
+            this.eliminar = new System.Windows.Forms.Button();
+            this.agregar = new System.Windows.Forms.Button();
+            this.totallbl = new System.Windows.Forms.Label();
+            this.totallbl2 = new System.Windows.Forms.Label();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Can = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_venta)).BeginInit();
@@ -104,12 +106,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.totallbl2);
+            this.groupBox2.Controls.Add(this.totallbl);
             this.groupBox2.Controls.Add(this.lb_productos);
             this.groupBox2.Controls.Add(this.lb_venta);
             this.groupBox2.Controls.Add(this.dgv_venta);
             this.groupBox2.Controls.Add(this.dgv_productos);
             this.groupBox2.Controls.Add(this.confirmar);
-            this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.lb_total);
             this.groupBox2.Controls.Add(this.eliminar);
             this.groupBox2.Controls.Add(this.agregar);
@@ -139,9 +142,10 @@
             this.dgv_venta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.DescripcionV});
+            this.Pre,
+            this.Can,
+            this.DescripcionV,
+            this.Total});
             this.dgv_venta.Name = "dgv_venta";
             this.dgv_venta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
@@ -162,36 +166,6 @@
             this.Descripcion});
             this.dgv_productos.Name = "dgv_productos";
             this.dgv_productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // confirmar
-            // 
-            resources.ApplyResources(this.confirmar, "confirmar");
-            this.confirmar.Name = "confirmar";
-            this.confirmar.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
-            // 
-            // lb_total
-            // 
-            resources.ApplyResources(this.lb_total, "lb_total");
-            this.lb_total.Name = "lb_total";
-            // 
-            // eliminar
-            // 
-            resources.ApplyResources(this.eliminar, "eliminar");
-            this.eliminar.Name = "eliminar";
-            this.eliminar.UseVisualStyleBackColor = true;
-            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
-            // 
-            // agregar
-            // 
-            resources.ApplyResources(this.agregar, "agregar");
-            this.agregar.Name = "agregar";
-            this.agregar.UseVisualStyleBackColor = true;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // Column1
             // 
@@ -218,6 +192,41 @@
             resources.ApplyResources(this.Descripcion, "Descripcion");
             this.Descripcion.Name = "Descripcion";
             // 
+            // confirmar
+            // 
+            resources.ApplyResources(this.confirmar, "confirmar");
+            this.confirmar.Name = "confirmar";
+            this.confirmar.UseVisualStyleBackColor = true;
+            // 
+            // lb_total
+            // 
+            resources.ApplyResources(this.lb_total, "lb_total");
+            this.lb_total.Name = "lb_total";
+            // 
+            // eliminar
+            // 
+            resources.ApplyResources(this.eliminar, "eliminar");
+            this.eliminar.Name = "eliminar";
+            this.eliminar.UseVisualStyleBackColor = true;
+            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
+            // 
+            // agregar
+            // 
+            resources.ApplyResources(this.agregar, "agregar");
+            this.agregar.Name = "agregar";
+            this.agregar.UseVisualStyleBackColor = true;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // totallbl
+            // 
+            resources.ApplyResources(this.totallbl, "totallbl");
+            this.totallbl.Name = "totallbl";
+            // 
+            // totallbl2
+            // 
+            resources.ApplyResources(this.totallbl2, "totallbl2");
+            this.totallbl2.Name = "totallbl2";
+            // 
             // Column2
             // 
             resources.ApplyResources(this.Column2, "Column2");
@@ -228,20 +237,25 @@
             resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // dataGridViewTextBoxColumn2
+            // Pre
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            resources.ApplyResources(this.Pre, "Pre");
+            this.Pre.Name = "Pre";
             // 
-            // dataGridViewTextBoxColumn3
+            // Can
             // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            resources.ApplyResources(this.Can, "Can");
+            this.Can.Name = "Can";
             // 
             // DescripcionV
             // 
             resources.ApplyResources(this.DescripcionV, "DescripcionV");
             this.DescripcionV.Name = "DescripcionV";
+            // 
+            // Total
+            // 
+            resources.ApplyResources(this.Total, "Total");
+            this.Total.Name = "Total";
             // 
             // Form4
             // 
@@ -271,7 +285,6 @@
         private System.Windows.Forms.Button btn_productos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button confirmar;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lb_total;
         private System.Windows.Forms.Button eliminar;
         private System.Windows.Forms.Button agregar;
@@ -279,15 +292,18 @@
         private System.Windows.Forms.Label lb_venta;
         private System.Windows.Forms.DataGridView dgv_venta;
         private System.Windows.Forms.DataGridView dgv_productos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.Label totallbl;
+        private System.Windows.Forms.Label totallbl2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Can;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }
