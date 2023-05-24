@@ -29,37 +29,62 @@ namespace punto_venta
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textusuario.Text = obtener_username();
+           
             validarcampos();
-            Persona objeto = new Persona()
+            if(validarcampos()== true)
             {
-                Nombre = textnombre.Text,
-                ApellidoP = textapellido1.Text,
-                ApellidoM = textapellido2.Text,
-                //Sexo = radioButton1.Text,
-                Usuario = textusuario.Text,
-                Contrasena = MD5Hash.Hash.GetMD5(contrasena.Text),
-            };
+                textusuario.Text = obtener_username();
+                Persona objeto = new Persona()
+                {
+                    Nombre = textnombre.Text,
+                    ApellidoP = textapellido1.Text,
+                    ApellidoM = textapellido2.Text,
+                    //Sexo = radioButton1.Text,
+                    Usuario = textusuario.Text,
+                    Contrasena = MD5Hash.Hash.GetMD5(contrasena.Text),
+                };
 
-            if (radioButton1.Checked == true)
-            {
-                objeto.Sexo = "Masculino";
+                if (radioButton1.Checked == true)
+                {
+                    objeto.Sexo = "Masculino";
+                }
+                else
+                {
+                    objeto.Sexo = "Femenino";
+                }
+                if (nivel.SelectedIndex == 1)
+                {
+                    objeto.Nivel = "1";
+                }
+                else
+                {
+                    objeto.Nivel = "2";
+                }
+                PersonaLogica.Instancia.Guardar(objeto);
+                MessageBox.Show("Usuario agregado: El nombre de tu usuario es: " + textusuario.Text);
+                textnombre.Text = "";
+                textapellido1.Text = "";
+                textapellido2.Text = "";
+                textusuario.Text = "";
+                contrasena.Text = "";
+                contrasenaV.Text = "";
+                pagEmpleados();
             }
             else
             {
-                objeto.Sexo = "Femenino";
+                MessageBox.Show("Error, no se pudo agregar el usuario...");
             }
-            if (nivel.SelectedIndex == 1)
-            {
-                objeto.Nivel = "1";
-            }
-            else
-            {
-                objeto.Nivel = "2";
-            }
+           
+            
 
-            PersonaLogica.Instancia.Guardar(objeto);
-            MessageBox.Show("Usuario agregado...");
+
+        }
+        private void pagEmpleados()
+        {
+            pag_empleados pag_Empleados = new pag_empleados();
+            pag_Empleados.Show();
+            Hide();
+            //Close();
 
 
         }
@@ -130,6 +155,11 @@ namespace punto_venta
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Application.Exit();
         }
     }
 }

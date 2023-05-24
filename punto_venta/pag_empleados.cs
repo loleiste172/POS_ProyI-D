@@ -75,7 +75,7 @@ namespace punto_venta
         {
             Form3 form3 = new Form3();
             form3.ShowDialog();
-
+            Hide();
         }
 
         private void btn_productos_Click(object sender, EventArgs e)

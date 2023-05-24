@@ -86,3 +86,33 @@ C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto
 C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.inventarioAdmin.resources
 C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pag_empleados.resources
 C:\Users\MARIAFLORESSANCHEZ\source\repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pruebaDataBase.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\punto_venta.exe.config
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\punto_venta.exe
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\punto_venta.pdb
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\MD5.dll
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.dll
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\bin\Debug\System.Data.SQLite.xml
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.AssemblyReference.cache
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.add_prod.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Eliminar_producto.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form1.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form2.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form3.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form4.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Form5.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.inventarioAdmin.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pag_empleados.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.Properties.Resources.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pruebaDataBase.resources
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.GenerateResource.cache
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.csproj.CopyComplete
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.exe
+C:\Users\LENOVO THINKPAD L480\Source\Repos\POS_ProyI-D\punto_venta\obj\Debug\punto_venta.pdb
