@@ -26,6 +26,7 @@ namespace punto_venta
         }
         private void actualizarTablaProductos(Inventario inventario)
         {
+            DateTime fechaActual = DateTime.Now;
             SQLiteDataReader datos = inventario.getProducts();
             int rowEscribir;
             dgv_productos.Rows.Clear();
@@ -39,6 +40,7 @@ namespace punto_venta
                 dgv_productos.Rows[rowEscribir].Cells[2].Value = Convert.ToString(datos["precio"]);
                 dgv_productos.Rows[rowEscribir].Cells[3].Value = Convert.ToString(datos["cantidad"]);
                 dgv_productos.Rows[rowEscribir].Cells[4].Value = Convert.ToString(datos["descripcion"]);
+                dgv_productos.Rows[rowEscribir].Cells[5].Value = fechaActual;
             }
         }
 
@@ -60,9 +62,11 @@ namespace punto_venta
         private void agregar_Click(object sender, EventArgs e)
         {
              int FilaSelected = dgv_productos.CurrentRow.Index;
-            //if (dgv_venta.SelectedRows.Count > 0)
+            int cantidad_productos = int.Parse(dgv_productos.Rows[FilaSelected].Cells[3].Value.ToString());
+
             if (FilaSelected > -1) 
             {
+                DateTime fechaActual = DateTime.Now;
                 //Verificamos si elproducto ya existe
                 decimal suma = 0,  total_venta, suma2 = 0;
                 decimal precio, total;
@@ -77,7 +81,8 @@ namespace punto_venta
                         // Si el ID se repite, aumentar la cantidad en 1
                         int cantidad = int.Parse(fila.Cells[3].Value.ToString());
                         fila.Cells[3].Value = (cantidad + 1).ToString();
-
+                        //cantidad_productos = int.Parse(dgv_productos.Rows[FilaSelected].Cells[3].Value.ToString());
+                        //dgv_productos.Rows[FilaSelected].Cells[3].Value = (cantidad_productos - 1).ToString();
                         /* for (int i = 0; i < dgv_venta.Rows.Count; i++)
                          {
                              if (cantidad > 1)
@@ -132,7 +137,7 @@ namespace punto_venta
                             }
                         }
                         // Muestra el resultado de la suma en el TextBox
-                        //totallbl.Text = precioTotal.ToString();
+                        //totallbl2.Text = precioTotal.ToString();
                         productoExiste = true;
                         break;
                     }
@@ -148,6 +153,7 @@ namespace punto_venta
                     dgv_venta.Rows[rowEscribir].Cells[3].Value = 1;
                     dgv_venta.Rows[rowEscribir].Cells[4].Value = dgv_productos.Rows[FilaSelected].Cells[4].Value.ToString();
                     dgv_venta.Rows[rowEscribir].Cells[5].Value = dgv_productos.Rows[FilaSelected].Cells[2].Value.ToString();
+                    dgv_venta.Rows[rowEscribir].Cells[6].Value = fechaActual;
 
                     for (int i = 0; i < dgv_venta.Rows.Count; i++)
                     {
@@ -174,19 +180,45 @@ namespace punto_venta
                             */
                         //cantidadd = int.Parse(dgv_venta.Rows[i].Cells[3].Value.ToString());
                             int cantidad = int.Parse(dgv_venta.Rows[i].Cells[3].Value.ToString());
+                            //int cantidad_productos = int.Parse(dgv_productos.Rows[FilaSelected].Cells[3].Value.ToString());
                         if (cantidad == 1)
                         {
-                            precio = Convert.ToDecimal(dgv_venta.Rows[i].Cells[2].Value);
-                            //total = precio * cantidadd;
-                            //dgv_venta.Rows[i].Cells[5].Value = total;
-                            suma2 = Convert.ToDecimal(totallbl.Text);
-                            suma = precio + suma2;
-                            //totallbl.Text = suma2.ToString();
-                            totallbl.Text = suma.ToString();
-                        }  
-                        //}
+                           
+                           // cantidad_productos = int.Parse(dgv_productos.Rows[FilaSelected].Cells[3].Value.ToString());
+                            //dgv_productos.Rows[FilaSelected].Cells[3].Value = (cantidad_productos - 1).ToString();
+
+                            DataGridViewColumn columna = dgv_venta.Columns[5];
+
+                            int suma3 = 0;
+
+                            foreach (DataGridViewRow fila in dgv_venta.Rows)
+                            {
+                                int valorCelda = Convert.ToInt32(fila.Cells[columna.Index].Value);
+                                suma3 += valorCelda;
+                            }
+
+                            totallbl.Text = suma3.ToString();
                         }
+
+                        /*
+                        if(cantidad == 0)
+                        {
+                            MessageBox.Show("¡PRODUCTO AGOTADO!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        */
+                        //}
                     }
+                }
+                          /*  if (cantidad_productos <= 0)
+                            {
+                                MessageBox.Show("¡PRODUCTO AGOTADO!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (dgv_venta.IsCurrentCellInEditMode || dgv_productos.IsCurrentCellInEditMode)
+                    {
+                        dgv_venta.CancelEdit();
+                        dgv_productos.CancelEdit();
+                    }
+                }*/
+
             }
 
                 //total.Text = (String)dgv_venta.Rows[rowEscribir].Cells[2].Value; //tenemos el precio del producto
@@ -254,6 +286,9 @@ namespace punto_venta
 
 
                     }
+
+                   
+
                 }
                 else
                 {
@@ -361,12 +396,6 @@ namespace punto_venta
             {
                 dgv_venta.Rows.Remove(fila);
             }
-            /*
-                for (int i = 0; i < dgv_venta.Rows.Count; i++)
-            {
-                dgv_venta.Rows.RemoveAt(i);
-            }
-                */
             totallbl.Text = "0";
         }
     }

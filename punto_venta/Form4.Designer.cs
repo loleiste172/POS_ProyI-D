@@ -45,12 +45,14 @@
             this.Can = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmar = new System.Windows.Forms.Button();
             this.lb_total = new System.Windows.Forms.Label();
             this.eliminar = new System.Windows.Forms.Button();
@@ -148,7 +150,8 @@
             this.Pre,
             this.Can,
             this.DescripcionV,
-            this.Total});
+            this.Total,
+            this.Fecha2});
             this.dgv_venta.Name = "dgv_venta";
             this.dgv_venta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
@@ -182,6 +185,11 @@
             resources.ApplyResources(this.Total, "Total");
             this.Total.Name = "Total";
             // 
+            // Fecha2
+            // 
+            resources.ApplyResources(this.Fecha2, "Fecha2");
+            this.Fecha2.Name = "Fecha2";
+            // 
             // dgv_productos
             // 
             this.dgv_productos.AllowUserToAddRows = false;
@@ -196,7 +204,8 @@
             this.nom,
             this.precio,
             this.cantidad,
-            this.Descripcion});
+            this.Descripcion,
+            this.Fecha});
             this.dgv_productos.Name = "dgv_productos";
             this.dgv_productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
@@ -224,6 +233,11 @@
             // 
             resources.ApplyResources(this.Descripcion, "Descripcion");
             this.Descripcion.Name = "Descripcion";
+            // 
+            // Fecha
+            // 
+            resources.ApplyResources(this.Fecha, "Fecha");
+            this.Fecha.Name = "Fecha";
             // 
             // confirmar
             // 
@@ -298,5 +312,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Can;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }
